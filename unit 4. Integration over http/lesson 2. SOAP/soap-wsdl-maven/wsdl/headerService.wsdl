@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://soap.jd.coursera.mephi.ru/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="http://iface.soap.jd.coursera.mephi.ru/" name="HeaderService" targetNamespace="http://soap.jd.coursera.mephi.ru/">
+  <wsdl:import location="http://localhost:8080/soap-service/HeaderService?wsdl=HeaderService.wsdl" namespace="http://iface.soap.jd.coursera.mephi.ru/">
+    </wsdl:import>
+  <wsdl:binding name="HeaderServiceSoapBinding" type="ns1:HeaderService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="doAuth">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="doAuth">
+        <soap:header message="ns1:doAuth" part="login" use="literal">
+        </soap:header>
+        <soap:header message="ns1:doAuth" part="password" use="literal">
+        </soap:header>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="doAuthResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="HeaderService">
+    <wsdl:port binding="tns:HeaderServiceSoapBinding" name="HeaderServiceImplPort">
+      <soap:address location="http://localhost:8080/soap-service/HeaderService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
