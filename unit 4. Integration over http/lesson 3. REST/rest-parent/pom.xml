@@ -13,6 +13,7 @@
   <modules>
     <module>rest-interface</module>
     <module>rest-service</module>
+    <module>rest-client</module>
   </modules>
 
   <dependencies>

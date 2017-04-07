@@ -11,6 +11,7 @@ import javax.ws.rs.core.Application;
 public class MyApplication extends Application {
   @Override
   public Set<Class<?>> getClasses() {
-    return new HashSet<>(Arrays.asList(MyServiceImpl.class, PathServiceImpl.class, HttpMethodsServiceImpl.class));
+    return new HashSet<>(Arrays.asList(MyServiceImpl.class, PathServiceImpl.class, HttpMethodsServiceImpl.class,
+        ConsumeProduceServiceImpl.class));
   }
 }
