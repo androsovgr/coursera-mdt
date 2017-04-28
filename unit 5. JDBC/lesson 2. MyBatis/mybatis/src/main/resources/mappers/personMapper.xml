@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ru.mephi.coursera.jd.mybatis.mapper.PersonMapper">
+  <resultMap type="ru.mephi.coursera.jd.mybatis.model.Person"
+    id="person">
+    <id column="pers_pk" property="id" />
+    <result column="pers_firstname" property="firstname" />
+    <result column="pers_lastname" property="lastname" />
+    <result column="pers_middlename" property="middlename" />
+    <result column="pers_user_pk" property="userId" />
+  </resultMap>
+
+</mapper>
